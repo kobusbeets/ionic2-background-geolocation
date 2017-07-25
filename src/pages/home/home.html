@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Tracking Service
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p>This is a tracking service sample.</p>
+  <p>Lat: {{ trackingService.lat }} <br>Lng: {{ trackingService.lng }} <br>Alt: {{ trackingService.alt }}</p>
+  <p>The service will auto restart in: {{ trackingService.est }} second(s)</p>
+  <button ion-button block (click)="startService()" [disabled]="trackingService.isRunning">Start Service</button>
+  <button ion-button block (click)="stopService()" [disabled]="!trackingService.isRunning">Stop Service</button>
+</ion-content>
